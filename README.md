@@ -1,33 +1,28 @@
-# Architecture
+# CS-465 — Full-Stack Web Development Reflection
 
-In building the full stack application, I explored multiple approaches to frontend development. Using Express with HTML templates provided a straightforward way to render static content and server-side dynamic pages. This was useful for administrative views where SEO and quick rendering were important. JavaScript (with DOM manipulation) allowed me to add interactive features directly on the client side, enhancing user experience without requiring a page reload. The single-page application (SPA) approach provided the most modern solution, creating a smooth, app-like experience for customers by dynamically updating content through API calls instead of reloading the entire page.
+**Coursework reflection on the MEAN-stack application development process.**
 
-On the backend, I chose a NoSQL MongoDB database because of its flexibility in handling unstructured data and its schema-less design. This made it easier to evolve the data model as the project requirements changed. Additionally, MongoDB’s document-oriented structure integrates well with JSON, making communication between the frontend and backend seamless.
+This repository currently contains **only this written reflection**. It does not contain the Express application, Angular frontend, MongoDB schema, API handlers, test suite, or deployment configuration. The discussion below describes course experience rather than software that can be run from this repository.
 
-# Functionality
+## Architecture explored
 
-While JavaScript is a programming language that drives interactivity in the browser, JSON (JavaScript Object Notation) is a lightweight data-interchange format. JSON is not executable like JavaScript but serves as a bridge between the frontend and backend by structuring data in a consistent, easy-to-parse format. For example, customer data retrieved from MongoDB was transmitted as JSON to the frontend, where JavaScript consumed and displayed it.
+- Express and server-rendered HTML for delivering pages.
+- JavaScript and SPA patterns for interactive client interfaces.
+- MongoDB documents and JSON exchange for API-driven data.
+- Reusable components and validation logic to reduce repeated code.
 
-Throughout development, I refactored code to improve efficiency. For instance, I consolidated repetitive form validation logic into reusable functions and turned repeated interface patterns into reusable UI components. This improved maintainability, reduced duplication, and made it easier to add new features without rewriting existing code.
+## Testing and security topics
 
-# Testing
+Coursework covered API requests, client/server interactions, administrator authentication, password handling, and negative test cases. No automated test scripts, test outputs, or authentication implementation are included here, so there are **no independently verifiable test results** in this repository.
 
-In a full stack application, API testing is crucial to validate request and response handling. I performed unit tests for individual functions, integration tests to ensure frontend and backend communication worked correctly, and endpoint tests to confirm API reliability. For example, GET, POST, PUT, and DELETE requests were tested with various inputs to ensure consistent behavior.
+## Technical tradeoffs
 
-Adding security introduced additional testing challenges. The admin login authentication required testing not only the correctness of login endpoints but also the security features, such as session handling, password hashing, and protection against unauthorized access. I learned that security testing must account for edge cases and malicious attempts, not just expected user behavior.
+**MongoDB vs SQL:** Document models support flexible schemas, but still require indexing, validation, and data consistency decisions.
 
-# Reflection
+**SPA vs server templates:** A SPA can reduce page reloads, but adds client-side state management and build/deployment complexity.
 
-This course has significantly advanced my technical and professional growth. I strengthened my understanding of full stack development, gained hands-on experience in integrating frontend, backend, and databases, and developed a working application that I can showcase in my portfolio.
+**API testing:** Unit, integration, and end-to-end tests provide distinct evidence. Those layers should be added alongside the actual source in a future release.
 
-Key skills I’ve learned include:
+## How to review
 
-- Designing and building RESTful APIs.
-
-- Implementing secure authentication systems.
-
-- Using MongoDB for data modeling and persistence.
-
-- Creating reusable and maintainable frontend components.
-
-Beyond technical skills, I also developed stronger problem-solving abilities and a deeper appreciation for iterative development. These experiences have made me a more competitive candidate for roles in web development and software engineering, as I can now demonstrate both technical proficiency and an understanding of professional best practices.
+Read this README as a technical reflection. There is no installation or hosted demo URL for this repository. For runnable, tested code, see [TkForge](https://github.com/xtyledan/TkForge-Visual-Tkinter-GUI-Builder) or [Animal Rescue Explorer](https://github.com/xtyledan/Animal-Rescue-Explorer-Local-Data-Dashboard).
